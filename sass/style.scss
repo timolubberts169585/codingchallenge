@@ -1,11 +1,11 @@
 @font-face {
     font-family: opensans-regular;
-    src: url(OpenSans-Regular.ttf);
+    src: url('../resources/fonts/OpenSans-Regular.ttf');
 }
 
 @font-face {
     font-family: opensans-bold;
-    src: url(OpenSans-Bold.ttf);
+    src: url('../resources/fonts/OpenSans-Bold.ttf');
 }
 body{
     font-family: opensans-regular;
@@ -35,14 +35,16 @@ body{
 
 .header{
     width: 100%;
-    height: 200px;
+    height: 50vh;
     margin-left: auto;
     margin-right: auto;
-    background-image: url('../resources/Harbor.jpg');
+    background-image: url('../resources/images/Harbor.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     &__logo{
-        
+        background-image: url('../resources/images/woman-helmet-work-electrician.jpg');
     }
 }
 
