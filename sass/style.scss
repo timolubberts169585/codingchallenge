@@ -1,0 +1,48 @@
+@font-face {
+    font-family: opensans-regular;
+    src: url(OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: opensans-bold;
+    src: url(OpenSans-Bold.ttf);
+}
+body{
+    font-family: opensans-regular;
+}
+
+.nav{
+
+
+    &__list{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item{
+        float: left;
+        display: inline;
+
+
+    }
+
+    &__link{
+        display: block;
+        text-align: center;
+    }
+}
+
+.header{
+    width: 100%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('../resources/Harbor.jpg');
+    background-repeat: no-repeat;
+
+    &__logo{
+        
+    }
+}
+
