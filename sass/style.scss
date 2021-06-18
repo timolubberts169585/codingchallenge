@@ -1,50 +1,204 @@
+/* open-sans-regular - latin */
 @font-face {
-    font-family: opensans-regular;
-    src: url('../resources/fonts/OpenSans-Regular.ttf');
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../resources/fonts/open-sans-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src:url('../resources/fonts/open-sans-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../resources/fonts/open-sans-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../resources/fonts/open-sans-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+        url('../resources/fonts/open-sans-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../resources/fonts/open-sans-v20-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../resources/fonts/open-sans-v20-latin-700.eot'); /* IE9 Compat Modes */
+    src:url('../resources/fonts/open-sans-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../resources/fonts/open-sans-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../resources/fonts/open-sans-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+        url('../resources/fonts/open-sans-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../resources/fonts/open-sans-v20-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-@font-face {
-    font-family: opensans-bold;
-    src: url('../resources/fonts/OpenSans-Bold.ttf');
-}
 body{
-    font-family: opensans-regular;
-}
-
-.nav{
-
-
-    &__list{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    &__item{
-        float: left;
-        display: inline;
-
-
-    }
-
-    &__link{
-        display: block;
-        text-align: center;
-    }
+    font-family: 'Open Sans';
 }
 
 .header{
+    
     width: 100%;
     height: 50vh;
     margin-left: auto;
     margin-right: auto;
-    background-image: url('../resources/images/Harbor.jpg');
+    background-image: linear-gradient(rgba(71, 111, 223, 0.5), rgba(71, 111, 223, 0.5)), url('../resources/images/Harbor.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    &__logo{
-        background-image: url('../resources/images/woman-helmet-work-electrician.jpg');
+    &__navbar{
+        font-family: 'Open Sans Bold';
+        color: white;
+        
+
+        width: 100%;
+        padding: 2% 10% 0 10%;
+        ul{
+            list-style-type: none;
+        }
+
+        li{
+            float: left;
+            display: inline;
+        }
+
+        a, a:hover, a:focus, a:active {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            text-align: left;
+        }
+        
+        &--logo{
+            width: 75px;
+            height: 75px;
+            float: left;
+
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+    }
+
+
+    &__text{
+        width: 50%;
+        margin: 6% 0 0 10%;
+        color:white;
+        &--title{
+            margin: 0 0 5% 0;
+        }
+
+        &--body{
+            width: 70%;
+        }
     }
 }
+
+.content{
+    width:100%;
+    height: 250vh;
+
+    background-image: url("../resources/images/Visual.svg");
+
+    &__about{
+        width:100%;
+        height: 50vh;
+
+        @media only screen and (min-width: 501px) {
+            &--img{
+                float: left;
+                width: 50%;
+                height: 100%;
+                img{
+                    display: block;
+                    margin: 25px auto 0 auto;
+                    max-width: 80%;
+                    max-height: 80%;
+                }
+    
+                
+            }
+        }
+        @media only screen and (max-width: 500px){
+            &--img{
+                float: left;
+                width: 100%;
+                height: 50%;
+                img{
+                    display: block;
+                    float: right;
+                    margin:auto;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+    
+                
+            }
+        }
+        &--text{
+            @media only screen and (min-width: 501px) {
+                float: right;
+                width: 50%;
+                height: 100%;
+            }
+            @media only screen and (max-width: 500px) {
+                float: right;
+                width: 100%;
+                height: 100%;
+            }
+            &--title{
+                width:100%;
+                margin: 5% 0 1% 5%;
+                font-family: 'Open Sans Bold';
+                color: blue;
+                float: left;
+            }
+        
+            &--body{
+                width: 100%;
+                color: grey;
+                margin: 0% 0 0 5%;
+                text-align: left; 
+                padding-right: 30%;
+                float: left;
+            }
+    
+            &--button{
+                
+                width: 100%;
+
+                button{
+                    width: 200px;
+                    height: 50px;
+                    margin: 3% 0 0 5%;
+                }
+                
+            }
+        }
+        
+    }
+ 
+
+    &__services{
+        width: 100%;
+        height: 5%;
+
+        &--title{
+            width:100%;
+            font-family: 'Open Sans Bold';
+            color: blue;
+            margin: 1% 0 1% 5%;
+            float: left;
+        }
+
+        &--body{
+            width: 100%;
+            color: grey;
+            margin: 0% 0 0 5%;
+            text-align: left; 
+            padding-right: 30%;
+            float: left;
+        }
+    }
+}
+
+
 
